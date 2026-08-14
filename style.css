@@ -391,6 +391,57 @@ a{
     text-underline-offset: 2px;
 }
 
+#testimonials{
+    min-height: auto;
+}
+
+.section-title-center{
+    text-align: center;
+    font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+    margin-bottom: 2rem;
+    color: #173321;
+}
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.testimonial-card{
+    border: 1px solid rgba(21, 63, 43, 0.18);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 1rem;
+}
+
+.testimonial-text{
+    color: #1d1d1d;
+    line-height: 1.55;
+    font-size: 1rem;
+}
+
+.testimonial-user{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.testimonial-avatar{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(21, 63, 43, 0.3);
+}
+
+.testimonial-name{
+    font-weight: 700;
+    color: #153f2b;
+}
+
 @media (max-width: 900px){
     .how-it-works-layout{
         grid-template-columns: 1fr;
@@ -398,6 +449,10 @@ a{
 
     .city-cards{
         grid-template-columns: repeat(2, minmax(180px, 1fr));
+    }
+
+    .testimonial-grid{
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
 
     .store-links{
@@ -415,6 +470,10 @@ a{
 
 @media (max-width: 560px){
     .city-cards{
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-grid{
         grid-template-columns: 1fr;
     }
 }
