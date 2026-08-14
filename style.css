@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    padding-top: 8vh;
+    overflow-x: hidden;
+}
+
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("assets/background-image.jpg") center center / cover no-repeat;
+    opacity: 0.23;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 8vh;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(8px);
+}
+
+.sections{
+    margin-left: auto;
+    flex: 0 1 auto;
+}
+
+.sections ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    width: fit-content;
+}
+
+.sections a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sections a:hover{
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-logo img{
+    display: block;
+    height: calc(8vh - 1.5rem);
+    width: auto;
+    max-height: 100%;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.page-sections{
+    display: block;
+}
+
+.content-section{
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+.content-section h2{
+    margin-bottom: 1rem;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#tagline{
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    max-width: 16ch;
+    font-family: "Trebuchet MS", "Gill Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #1d1d1d;
+    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.45), 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.tagline-line{
+    display: block;
+}
+
+.tagline-line--first{
+    color: #1f1f1f;
+}
+
+.tagline-line--second{
+    color: #2f5d3a;
+    font-style: italic;
+}
