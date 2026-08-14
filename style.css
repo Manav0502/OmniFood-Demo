@@ -568,3 +568,95 @@ a{
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 834px){
+    .city-cards{
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+    }
+
+    .testimonial-grid{
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .pricing-grid{
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .how-it-works-layout{
+        grid-template-columns: 1fr;
+    }
+
+    #phone{
+        width: min(320px, 70vw);
+    }
+}
+
+@media (max-width: 390px){
+    body{
+        padding-top: 0;
+    }
+
+    #navbar{
+        position: static;
+        height: auto;
+        padding: 0.75rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sections{
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sections ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0.6rem;
+    }
+
+    .sections a{
+        width: 100%;
+    }
+
+    .content-section{
+        padding: 3rem 1rem;
+    }
+
+    .hero-actions,
+    .store-links,
+    .testimonial-grid,
+    .city-cards,
+    .pricing-grid{
+        width: 100%;
+    }
+
+    #tagline{
+        max-width: 12ch;
+        font-size: clamp(2.35rem, 16vw, 4rem);
+    }
+
+    .hero-actions{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-btn,
+    .store-link,
+    .plan-signup{
+        width: 100%;
+    }
+
+    .how-it-works-layout,
+    .testimonial-grid,
+    .city-cards,
+    .pricing-grid{
+        grid-template-columns: 1fr;
+    }
+
+    #phone{
+        width: min(280px, 92vw);
+    }
+}
