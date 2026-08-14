@@ -442,6 +442,89 @@ a{
     color: #153f2b;
 }
 
+#pricing{
+    min-height: auto;
+}
+
+.pricing-subtitle{
+    text-align: center;
+    margin: -1rem auto 2rem;
+    color: #2d4d3b;
+    font-weight: 600;
+}
+
+.pricing-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.pricing-card{
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(21, 63, 43, 0.16);
+    border-radius: 1rem;
+    padding: 1.4rem 1.2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.pricing-card--featured{
+    border-color: rgba(21, 63, 43, 0.35);
+}
+
+.plan-name{
+    color: #173321;
+    margin-bottom: 0.6rem;
+}
+
+.plan-price{
+    margin-bottom: 1rem;
+    color: #0e3523;
+}
+
+.price-value{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.price-cycle{
+    margin-left: 0.25rem;
+    font-weight: 600;
+}
+
+.plan-features{
+    list-style: disc;
+    padding-left: 1.2rem;
+    color: #1f1f1f;
+    display: grid;
+    gap: 0.45rem;
+    min-height: 9rem;
+}
+
+.plan-action{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.plan-signup{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.3rem;
+    border-radius: 999px;
+    background: #153f2b;
+    color: #f5fff9;
+    font-weight: 700;
+    border: 2px solid #153f2b;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.plan-signup:hover{
+    background: transparent;
+    color: #153f2b;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 900px){
     .how-it-works-layout{
         grid-template-columns: 1fr;
@@ -452,6 +535,10 @@ a{
     }
 
     .testimonial-grid{
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .pricing-grid{
         grid-template-columns: repeat(2, minmax(220px, 1fr));
     }
 
@@ -474,6 +561,10 @@ a{
     }
 
     .testimonial-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid{
         grid-template-columns: 1fr;
     }
 }
