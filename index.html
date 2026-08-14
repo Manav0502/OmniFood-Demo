@@ -10,37 +10,116 @@
 <body>
     <header id="navbar">
         <div class="navbar-logo">
-            <img src="assets/logo.png" alt="OmniFood Logo" >
+            <img src="assets/logo.png" alt="OmniFood Logo">
         </div>
         <div class="sections">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#food-delivery">FOOD DELIVERY</a></li>
+                <li><a href="#how-it-works">HOW IT WORKS</a></li>
+                <li><a href="#our-cities">OUR CITIES</a></li>
+                <li><a href="#">SIGN-UP</a></li>
             </ul>
         </div>
     </header>
+
     <main class="page-sections">
-        <section id="home" class="content-section">
-            <h2>Home</h2>
+        <section id="food-delivery" class="content-section">
             <p id="tagline">
                 <span class="tagline-line tagline-line--first">Say NO to junk food,</span>
                 <span class="tagline-line tagline-line--second">Say YES to healthy food...!</span>
             </p>
+            <div class="hero-actions">
+                <button class="cta-btn cta-btn--hungry">I'm Hungry</button>
+                <button class="cta-btn cta-btn--more">Show More</button>
+            </div>
         </section>
-        <section id="menu" class="content-section">
-            <h2>Menu</h2>
-            <p>Explore the menu here.</p>
+
+        <section id="how-it-works" class="content-section">
+            <h1>How It Works</h1>
+            <p>Choose your meal, place your order, and enjoy fast delivery.</p>
+            <div class="how-it-works-layout">
+                <img src="assets/phone.jpg" alt="Phone app preview" id="phone">
+                <div class="steps-column">
+                    <ol class="steps-to-order">
+                        <li class="step">Choose plan that fits best for your need and sign-up today</li>
+                        <li class="step">Pay for the plan and download the app</li>
+                        <li class="step">You are done start ordering!!</li>
+                    </ol>
+                    <div class="store-links">
+                        <a class="store-link store-link--google" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/play-store-icon.jpg" alt="Google Play icon" class="store-logo">
+                            <span>Get it on Google Play</span>
+                        </a>
+                        <a class="store-link store-link--apple" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/app-store-icon.jpg" alt="App Store icon" class="store-logo">
+                            <span>Download on the App Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="testimonials" class="content-section">
-            <h2>Testimonials</h2>
-            <p>Read customer reviews here.</p>
+
+        <section id="our-cities" class="content-section">
+            <h1>Our Cities</h1>
+            <p>We currently serve customers across major cities.</p>
+            <div class="city-cards">
+                <article class="city-card">
+                    <img src="assets/madeira.jpg" alt="Madeira city view" class="city-image">
+                    <h2 class="city-name">Madeira</h2>
+                    <ul class="city-meta">
+                        <li><span class="metric-icon" aria-hidden="true">&#128101;</span> 1800+ happy customers</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#9733;</span> 80+ top chefs</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#127760;</span> <a href="https://madeira.omnifood.com" target="_blank" rel="noopener noreferrer">madeira.omnifood.com</a></li>
+                    </ul>
+                </article>
+
+                <article class="city-card">
+                    <img src="assets/manchester.jpg" alt="Manchester city view" class="city-image">
+                    <h2 class="city-name">Manchester</h2>
+                    <ul class="city-meta">
+                        <li><span class="metric-icon" aria-hidden="true">&#128101;</span> 1450+ happy customers</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#9733;</span> 65+ top chefs</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#127760;</span> <a href="https://manchester.omnifood.com" target="_blank" rel="noopener noreferrer">manchester.omnifood.com</a></li>
+                    </ul>
+                </article>
+
+                <article class="city-card">
+                    <img src="assets/madrid.jpg" alt="Madrid city view" class="city-image">
+                    <h2 class="city-name">Madrid</h2>
+                    <ul class="city-meta">
+                        <li><span class="metric-icon" aria-hidden="true">&#128101;</span> 2100+ happy customers</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#9733;</span> 92+ top chefs</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#127760;</span> <a href="https://madrid.omnifood.com" target="_blank" rel="noopener noreferrer">madrid.omnifood.com</a></li>
+                    </ul>
+                </article>
+
+                <article class="city-card">
+                    <img src="assets/turin.jpg" alt="Turin city view" class="city-image">
+                    <h2 class="city-name">Turin</h2>
+                    <ul class="city-meta">
+                        <li><span class="metric-icon" aria-hidden="true">&#128101;</span> 1250+ happy customers</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#9733;</span> 54+ top chefs</li>
+                        <li><span class="metric-icon" aria-hidden="true">&#127760;</span> <a href="https://turin.omnifood.com" target="_blank" rel="noopener noreferrer">turin.omnifood.com</a></li>
+                    </ul>
+                </article>
+            </div>
         </section>
-        <section id="about" class="content-section">
-            <h2>About</h2>
-            <p>Learn more about OmniFood here.</p>
-        </section>
+
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <img src="assets/logo.png" alt="OmniFood Logo">
+            <div>
+                <h3>OmniFood</h3>
+                <p>Fresh meals delivered fast and simple.</p>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>Email: support@omnifood.com</p>
+            <p>Phone: +1 234 567 890</p>
+        </div>
+        <p class="footer-copy">&copy; 2026 OmniFood. All rights reserved.</p>
+    </footer>
 </body>
 </html>
