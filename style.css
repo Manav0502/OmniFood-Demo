@@ -38,7 +38,6 @@ body::before{
     display: flex;
     align-items: center;
     gap: 1rem;
-    backdrop-filter: blur(8px);
 }
 
 .sections{
@@ -61,15 +60,12 @@ body::before{
     padding: 0.6rem 1.1rem;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     font-weight: 600;
-    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .sections a:hover{
-    transform: translateY(-1px);
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .navbar-logo img{
@@ -77,6 +73,48 @@ body::before{
     height: calc(8vh - 1.5rem);
     width: auto;
     max-height: 100%;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+.nav-toggle-label{
+    display: none;
+    margin-left: auto;
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-toggle-label span{
+    display: block;
+    width: 1.5rem;
+    height: 2px;
+    background: #153f2b;
+    border-radius: 999px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 2px;
+    background: #153f2b;
+    border-radius: 999px;
+}
+
+.nav-toggle-label span::before{
+    top: -0.45rem;
+}
+
+.nav-toggle-label span::after{
+    top: 0.45rem;
 }
 
 li{
@@ -119,7 +157,6 @@ a{
     letter-spacing: -0.05em;
     text-transform: uppercase;
     color: #1d1d1d;
-    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.45), 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .tagline-line{
@@ -150,17 +187,15 @@ a{
     font-weight: 700;
     letter-spacing: 0.02em;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .cta-btn--hungry{
     background: #1a1a1a;
     color: #fffdf6;
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
 }
 
 .cta-btn--hungry:hover{
-    transform: translateY(-2px);
     background: #000;
 }
 
@@ -168,11 +203,9 @@ a{
     background: rgba(255, 255, 255, 0.86);
     color: #153f2b;
     border-color: #153f2b;
-    box-shadow: 0 10px 22px rgba(21, 63, 43, 0.18);
 }
 
 .cta-btn--more:hover{
-    transform: translateY(-2px);
     background: #153f2b;
     color: #f4fffa;
 }
@@ -232,7 +265,6 @@ a{
     height: auto;
     width: min(340px, 38vw);
     border-radius: 1.25rem;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
 }
 
 .how-it-works-layout{
@@ -270,7 +302,6 @@ a{
     color: #1c1c1c;
     font-weight: 600;
     line-height: 1.4;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .step::before{
@@ -344,7 +375,6 @@ a{
     border: 1px solid rgba(21, 63, 43, 0.18);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
 }
 
 .city-image{
@@ -412,7 +442,6 @@ a{
     border: 1px solid rgba(21, 63, 43, 0.18);
     border-radius: 1rem;
     padding: 1.25rem;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
     display: grid;
     gap: 1rem;
 }
@@ -464,7 +493,6 @@ a{
     border: 1px solid rgba(21, 63, 43, 0.16);
     border-radius: 1rem;
     padding: 1.4rem 1.2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
 }
 
 .pricing-card--featured{
@@ -592,21 +620,22 @@ a{
 }
 
 @media (max-width: 390px){
-    body{
-        padding-top: 0;
-    }
-
     #navbar{
-        position: static;
         height: auto;
         padding: 0.75rem 1rem;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .nav-toggle-label{
+        display: flex;
     }
 
     .sections{
+        display: none;
         margin-left: 0;
         width: 100%;
+        order: 3;
     }
 
     .sections ul{
@@ -619,6 +648,10 @@ a{
 
     .sections a{
         width: 100%;
+    }
+
+    .nav-toggle:checked ~ .sections{
+        display: block;
     }
 
     .content-section{
@@ -658,5 +691,9 @@ a{
 
     #phone{
         width: min(280px, 92vw);
+    }
+
+    body{
+        padding-top: 4.5rem;
     }
 }
